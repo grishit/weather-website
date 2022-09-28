@@ -3,6 +3,7 @@ const express = require('express')                  // express library is import
 const hbs = require('hbs')
 const {fetchData} = require('./utils/geocode.js')
 const {forecast} = require('./utils/forecast.js')
+const port = process.env.PORT || 3000
 
 
 const app = express()                               // creating app variable using express function 
@@ -121,9 +122,9 @@ app.get('*', (req,res) => {                              // it is used to setup 
 
 
 
-app.listen(3000, () => {                                // app.listen is imoportant as it helps in opening server using specific port
+app.listen(port, () => {                                // app.listen is imoportant as it helps in opening server using specific port
                                                          // port 3000 is default develpor port which is used locally
-    console.log("server started on port 3000");
+    console.log("server started on port ", port);
 
 
 })                                               
