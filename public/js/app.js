@@ -21,7 +21,7 @@ weatherForm.addEventListener('submit', (e) => {
             return [firstPara.textContent = result.error, console.log(result.error)]
             //return console.log(result.error);
         }
-        firstPara.textContent = 'At '+ result.location
+        firstPara.textContent = result.location
         secondPara.textContent = 'Weather is '+ result.description +', with temperature: '+ result.temperature +' degrees'
         console.log(result);
     })
