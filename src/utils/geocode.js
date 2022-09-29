@@ -73,7 +73,7 @@ const fetchData = async (address,callback) => {
   }
   else{
    callback(undefined, {
-    location: 'At '+data[0].name+', '+data[0].stae_or_region+', '+data[0].country.name,
+    location: 'At '+data[0].name+', '+data[0].state_or_region+', '+data[0].country.name,
     lat: data[0].latitude,
     long: data[0].longitude
   })}
